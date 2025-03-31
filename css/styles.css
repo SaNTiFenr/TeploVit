@@ -1,4 +1,18 @@
-header.Nav_header{
+body{
+    margin: 0px;
+}
+.Up_header{
+    display: flex;
+}
+.Nav_header{
+    background:#0615A8;
+    color:#86A7FB;
+}
+.Nav_Bar{
+    display: flex;
+    list-style-type: none;
+}
+.footer_info{
     background:#0615A8;
     color:#86A7FB;
 }
