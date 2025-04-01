@@ -1,18 +1,78 @@
+@font-face {
+    font-family: "Finder"; 
+    src: url("../Fonts/Finder.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+p{
+    font-family: "Finder";
+} 
 body{
     margin: 0px;
+}
+.logo_img img{
+    margin-top: 15%;
+}
+.Logo_text{
+    color: rgb(51, 153, 204);
+    font-size: 24px;
 }
 .Up_header{
     display: flex;
 }
+.Up_header div{
+    margin-left: auto;
+    margin-right: auto;
+}
 .Nav_header{
     background:#0615A8;
     color:#86A7FB;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 .Nav_Bar{
     display: flex;
+    padding: 0px;
+    margin-top: 0px;
     list-style-type: none;
+    margin-bottom: 0px;
 }
-.footer_info{
+.Nav_Bar li{
+    font-family: "Finder";
+    margin-left: auto;
+    margin-right: auto;
+}
+.Logo_social{
+    display: flex;
+    flex-direction: column;
+}
+.Logo_social img{
+    width: 30px;
+}
+main{
+    display: flex;
+    box-shadow: 
+    inset -5px 0 5px -3px rgba(0,0,0,0.5), 
+    inset 5px 0 5px -3px rgba(0,0,0,0.5),
+    0 -5px 5px -3px rgba(0,0,0,0), /* Тень-призрак */
+    0 5px 5px -3px rgba(0,0,0,0);
+}
+.Main_info{
+    width: 30%;
+    padding-right: 35%;
+    padding-left: 35%;
+}
+footer{
     background:#0615A8;
     color:#86A7FB;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.footer_info{
+   
+} 
+.footer_info{
+    text-align: center;
 }
