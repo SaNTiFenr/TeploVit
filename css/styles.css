@@ -79,28 +79,7 @@ main{
     0 -5px 5px -3px rgba(0,0,0,0), /* Тень-призрак */
     0 5px 5px -3px rgba(0,0,0,0);
 }
-.slider{
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-.slides{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slide{
-    min-width: 100%;
-    box-sizing: border-box;
-}
-.control {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-}
+
 
 .Main_info{
     width: 30%;
@@ -118,3 +97,79 @@ footer{
 .footer_info{
     text-align: center;
 }
+
+
+
+
+
+
+
+
+  
+  .container {
+    position: relative;
+  }
+  
+  .mySlides {
+    justify-content: center;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(34, 143, 85);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .caption-container {
+    display: none;
+    text-align: center;
+    background-color: orangered;
+    padding: 2px 16px;
+    color: white;
+  }
+  .row{
+    display: none;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
