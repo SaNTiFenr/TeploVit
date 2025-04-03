@@ -4,7 +4,9 @@
     font-style: normal; 
     font-weight: normal; 
 }
-
+body{
+    
+}
 p{
     font-family: "Finder";
 } 
@@ -127,73 +129,43 @@ footer{
 .footer_info{
     text-align: center;
 }
-
-.container {
+.slider {
     position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden; 
 }
 
-.mySlides {
-    justify-content: center;
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.cursor {
-    cursor: pointer;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    text-align: center;
 }
 
+.slide img{
+    margin: 0px;
+    
+}
+
+.active {
+     
+}/* Показать активный слайд */
+
+.prev{
+    
+}
+.next{
+    
+}
 .prev,
 .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: rgb(34, 143, 85);
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.caption-container {
-    display: none;
-    text-align: center;
-    background-color: orangered;
-    padding: 2px 16px;
-    color: white;
-}
-
-.row{
-    display: none;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
+   opacity: 0.5; /* Полупрозрачность для соседних слайдов */
+   transform: scale(0.5);  /*Уменьшение размера соседних слайдов */
+   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Плавный переход */
 }
