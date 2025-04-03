@@ -32,8 +32,8 @@ body{
 .Nav_header{
     background:#0615A8;
     color:#86A7FB;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    /* padding-top: 1%;
+    padding-bottom: 1%; */
 }
 .Nav_Bar{
     display: flex;
@@ -41,6 +41,8 @@ body{
     margin-top: 0px;
     list-style-type: none;
     margin-bottom: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%; 
 }
 .Nav_Bar a{
     font-family: "Finder";
@@ -48,6 +50,9 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-decoration: none;
+}
+.Nav_Bar a:hover{
+    background-color: red;
 }
 .Logo_social{
     display: flex;
@@ -63,6 +68,9 @@ body{
 .Logo_social img{
     width: 30px;
 }
+.Logo_social p{
+    margin: 0px;
+}
 main{
     display: flex;
     box-shadow: 
@@ -72,10 +80,26 @@ main{
     0 5px 5px -3px rgba(0,0,0,0);
 }
 .slider{
-    
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
 }
 .slides{
-    
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
 }
 
 .Main_info{
