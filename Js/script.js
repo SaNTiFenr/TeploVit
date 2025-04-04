@@ -45,7 +45,7 @@ let currentIndex = 0;
 let direction = 1; // Направление прокрутки (1 - вперед, -1 - назад)
 
 const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length / 2; // Общее количество уникальных слайдов
+const totalSlides = slides.length / 1; // Общее количество уникальных слайдов
 
 function showSlide(index) {
     // Убедимся, что индекс в пределах допустимого диапазона

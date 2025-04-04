@@ -52,18 +52,23 @@ body{
     margin-top: 0px;
     list-style-type: none;
     margin-bottom: 0px;
-    padding-top: 1%;
-    padding-bottom: 1%; 
+    justify-content: center;
 }
 
 .Nav_Bar a{
     font-family: "Finder";
     color: #86A7FB;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     text-decoration: none;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+    padding-right: 2%;
+    padding-left: 2%; 
 }
-
+/* .Nav_Bar:hover{
+    background-color: red;
+} */
 .Nav_Bar a:hover{
     background-color: red;
 }
@@ -139,6 +144,8 @@ footer{
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    /* width: 60%;
+    justify-self: center; */
 }
 
 .slide {
@@ -154,8 +161,8 @@ footer{
 }
 
 .active {
-     
-}/* Показать активный слайд */
+
+}
 
 .prev{
     
