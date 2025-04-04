@@ -24,8 +24,14 @@
             <div class="Logo_social">
                 <a href="" title="Vk" rel="" class=""><img src="..\Image\black_vk.svg"> Наши соц сети</a>
                 <a href="" title="Insta" rel="" class=""><img src="..\Image\black_inst.svg"> Наши соц сети</a>
-                <p><img src="..\Image\mts.jpg">+ 375 33 613-01-08</p>
-                <p><img src="..\Image\mts.jpg">+ 375 29 717-78-80</p>
+                <div class="number_wrapper">
+                    <img src="..\Image\mts.jpg">
+                    <p>+ 375 33 613-01-08</p>
+                </div>
+                <div class="number_wrapper">
+                    <img src="..\Image\mts.jpg">
+                    <p>+ 375 29 717-78-80</p>
+                </div>
             </div>
         </div>
         <div class="Nav_header">
@@ -41,21 +47,62 @@
         </div>  
     </header>
     <main>
-        <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&amp;source=constructor-api&amp;um=constructor%3AV3aK97zjxxN1nqcru_bnX0L1R2zGUcGq" frameborder="0" allowfullscreen="true" width="600px" height="450px" style="display: block;">
-        </iframe>
-        <form action="" method="get" class="form-example">
-            <div class="form-example">
-                <label for="name">Ваше имя: </label>
-                <input type="text" name="name" id="name" required />
+        <div class="main_wrapper">
+            <div class="about_us_info">
+                <p class="big_p">
+                    Контакты
+                </p>
+                <p>
+                    компания "ТеплоВит"Республика Беларусь, 210040, г. Витебск, ул. Фрунзе д. 22 к.3
+                </p>
+                <p>
+                    Телефоны:
+                </p>
+                <div class="number_wrapper">
+                    <img src="..\Image\mts.jpg">
+                    <p>+ 375 33 613-01-08</p>
+                </div>
+                <div class="number_wrapper">
+                    <img src="..\Image\mts.jpg">
+                    <p>+ 375 29 717-78-80</p>
+                </div>
+                <p>
+                    Электронная почта: <a href="mailto:teplo.vit@mail.ru">teplo.vit@mail.ru</a> 
+                </p>
             </div>
-            <div class="form-example">
-                <label for="email">Введите ваш адресс электронной почты: </label>
-                <input type="email" name="email" id="email" required />
+            <div class="map_wrapper">
+                <p class="bolid_p">
+                    Схема проезда:
+                </p>
+                <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&amp;source=constructor-api&amp;um=constructor%3AV3aK97zjxxN1nqcru_bnX0L1R2zGUcGq" frameborder="0" allowfullscreen="true" width="600px" height="450px" style="display: block;">
+                </iframe>
             </div>
-            <div class="form-example">
-                <input type="submit" value="Отправить" />
+            <div class="form_wrapper">
+                <div class="contact_form">
+                    <p>Контактная форма:</p>
+                </div>
+                <form action="" method="get" class="form-example">
+                    <div class="form-example">
+                        <label for="name">Ваше имя: </label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="form-example">
+                        <label for="email">Введите ваш адресс электронной почты: </label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="form-example_textarea_wrapper">
+                        <label for="textarea">Ваше предложение: </label>
+                        <div class="form-example_textarea">
+                            <textarea type="textarea" name="textarea" id="textarea">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-example_submit">
+                        <input type="submit" value="Отправить" />
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </main>
     <footer>
         <div class="footer_info">
