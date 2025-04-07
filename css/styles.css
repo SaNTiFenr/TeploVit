@@ -4,19 +4,13 @@
     font-style: normal; 
     font-weight: normal; 
 }
-body{
-    
-}
+
 p{
     font-family: "Finder";
 } 
 
 body{
     margin: 0px;
-}
-
-.logo_img img{
-    
 }
 
 .Logo a {
@@ -183,6 +177,33 @@ main{
     font-size: 24px;
     align-items: center;
 }
+
+.Finished_work{
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 100%;
+}
+
+.Finished_work_card{
+    border: 1px solid;
+    border-radius: 10%;
+    text-align: center;
+    padding: 5%;
+    height: min-content;
+    margin: 2%;
+}
+
+.Finished_work_card_img{
+    
+}
+
+.Finished_works_wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .contact_form p{
     margin: 0px;
 }
@@ -228,7 +249,7 @@ footer{
     
 }
 
-.active {
+/* .active {
 
 }
 
@@ -238,7 +259,7 @@ footer{
 
 .next{
     
-}
+} */
 
 .prev,
 .next {
