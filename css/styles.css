@@ -31,6 +31,7 @@ body{
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-around;
 }
 
 .Nav_header{
@@ -136,7 +137,10 @@ main{
 .number_wrapper{
     display: flex;
     align-items: center;
+    margin-left: 0px !important;
+    margin-right: 0px;
 }
+
 
 .form-example{
     display: flex;
@@ -202,6 +206,8 @@ main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border-radius: 1%;
+    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
 }
 
 .contact_form p{
