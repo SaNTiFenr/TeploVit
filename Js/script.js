@@ -1,46 +1,17 @@
-// let slideIndex = 1;
-// showSlides(slideIndex);
+const currentLocation = window.location.href;
 
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
+// Получаем все элементы меню
+const menuItems = document.querySelectorAll('.Nav_Bar_a');
 
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
+// Перебираем элементы меню и добавляем класс 'active' к текущему элементу
+menuItems.forEach(item => {
+    // Проверяем, совпадает ли полный URL ссылки с текущим URL
+    if (currentLocation.includes(item.getAttribute('href'))) 
+    {
+        item.classList.add('active');
+    }
+});
 
-// let slideInterval = setInterval(() => {
-//     plusSlides(1);
-// }, 3000);
-
-// let slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-// slideshowContainer.addEventListener('mouseenter', () => {
-//     clearInterval(slideInterval);
-// });
-
-// slideshowContainer.addEventListener('mouseleave', () => {
-// slideInterval = setInterval(() => {
-//     plusSlides(1);
-// }, 3000);
-// });
-
-// function showSlides(n) {
-//     let i;
-//     let slides = document.getElementsByClassName("mySlides");
-//     let dots = document.getElementsByClassName("demo");
-//     let captionText = document.getElementById("caption");
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     }
-//     slides[slideIndex-1].style.display = "block";
-//     dots[slideIndex-1].className += " active";
-//     captionText.innerHTML = dots[slideIndex-1].alt;
-// }
 let currentIndex = 0;
 let direction = 1; // Направление прокрутки (1 - вперед, -1 - назад)
 
@@ -55,11 +26,14 @@ function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.classList.remove('active', 'prev', 'next');
 
-        if (i === currentIndex) {
+        if (i === currentIndex) 
+        {
             slide.classList.add('active');
-        } else if (i === (currentIndex - 1 + totalSlides) % totalSlides) {
+        } else if (i === (currentIndex - 1 + totalSlides) % totalSlides) 
+        {
             slide.classList.add('prev');
-        } else if (i === (currentIndex + 1) % totalSlides) {
+        } else if (i === (currentIndex + 1) % totalSlides) 
+        {
             slide.classList.add('next');
         }
     });
@@ -76,11 +50,13 @@ showSlide(currentIndex);
 setInterval(() => nextSlide(), 3000);
 
 function nextSlide() {
-   if (direction === 1 && currentIndex === totalSlides - 1) {
+    if (direction === 1 && currentIndex === totalSlides - 1) 
+    {
        direction = -1; // Меняем направление на обратное
-   } else if (direction === -1 && currentIndex === 0) {
+    } else if (direction === -1 && currentIndex === 0) 
+    {
        direction = 1; // Меняем направление на прямое
-   }
-   
-   showSlide(currentIndex + direction);
+    }
+    showSlide(currentIndex + direction);
 }
+

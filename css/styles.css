@@ -17,6 +17,15 @@ body{
     align-self: center;
 }
 
+nav a.active{
+    background-color: #555;
+}
+
+.Nav_Bar .active{
+    background: red;
+	color: #fff;
+}
+
 .Logo_text{
     color: rgb(51, 153, 204);
     font-size: 24px;
@@ -66,6 +75,7 @@ body{
 } */
 .Nav_Bar a:hover{
     background-color: red;
+    color: #fff;
 }
 
 .Logo_social{
@@ -147,7 +157,7 @@ main{
     flex-direction: column;
     padding-bottom: 1%;
     padding-top: 1%;
-    color: rgb(51, 153, 204);
+    /* color: rgb(51, 153, 204); */
 }
 
 .form-example input{
@@ -287,4 +297,82 @@ footer{
     5px 0 5px -3px rgba(0,0,0,0.5),
     0 -5px 5px -3px rgba(0,0,0,0), /* Тень-призрак */
     0 5px 5px -3px rgba(0,0,0,0);
+}
+
+.up_title{
+    font-family: "Finder"; 
+    src: url("../Fonts/Finder.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    font-size: 48px;
+}
+
+.Services_wrapper{
+    width: 50%;
+    border-radius: 1%;
+    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
+}
+
+.slider_services {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides_services {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide_services{
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide_services h2 {
+    font-size: 24px;
+}
+
+.slide_services p {
+    font-size: 16px;
+}
+
+button {
+    /* position: absolute; */
+    top: 50%;
+    /* transform: translateY(-50%); */
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.prev_services {
+    left: 10px;
+}
+
+.next_services{
+    right: 10px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px; 
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
 }
