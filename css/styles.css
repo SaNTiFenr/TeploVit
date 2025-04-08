@@ -5,6 +5,13 @@
     font-weight: normal; 
 }
 
+li{
+    font-family: "Finder"; 
+    src: url("../Fonts/Finder.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
 p{
     font-family: "Finder";
 } 
@@ -70,9 +77,7 @@ nav a.active{
     padding-right: 2%;
     padding-left: 2%; 
 }
-/* .Nav_Bar:hover{
-    background-color: red;
-} */
+
 .Nav_Bar a:hover{
     background-color: red;
     color: #fff;
@@ -115,7 +120,6 @@ nav a.active{
 
 main{
     display: flex;
-
     justify-content: center;
 }
 
@@ -136,6 +140,7 @@ main{
 }
 
 .Main_info{
+    padding: 5%;
     border-radius: 1%;
     box-shadow: 
     -5px 0 5px -3px rgba(0,0,0,0.5), 
@@ -151,13 +156,11 @@ main{
     margin-right: 0px;
 }
 
-
 .form-example{
     display: flex;
     flex-direction: column;
     padding-bottom: 1%;
     padding-top: 1%;
-    /* color: rgb(51, 153, 204); */
 }
 
 .form-example input{
@@ -208,8 +211,14 @@ main{
     margin: 2%;
 }
 
-.Finished_work_card_img{
+/* .Finished_work_card_img{
     
+} */
+
+.about_us{
+    /* padding: 5%; */
+    border-radius: 1%;
+    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
 }
 
 .Finished_works_wrapper{
@@ -239,6 +248,7 @@ footer{
 .footer_info{
     text-align: center;
 }
+
 .slider {
     position: relative;
     width: 100%;
@@ -285,12 +295,26 @@ footer{
 }
 
 .main_ab_us_wrapper{
+    /* padding: 5%; */
     display: flex;
     text-align: justify;
     justify-content: center;
 }
 .about{
-    width: 30%;
+    width: 50%;
+    padding: 2%;
+    border-radius: 1%;
+    box-shadow: 
+    -5px 0 5px -3px rgba(0,0,0,0.5), 
+    5px 0 5px -3px rgba(0,0,0,0.5),
+    0 -5px 5px -3px rgba(0,0,0,0), /* Тень-призрак */
+    0 5px 5px -3px rgba(0,0,0,0);
+}
+
+.contacts_wrapper{
+    justify-items: center;
+    width: 50%;
+    padding: 2%;
     border-radius: 1%;
     box-shadow: 
     -5px 0 5px -3px rgba(0,0,0,0.5), 
@@ -307,16 +331,25 @@ footer{
     font-size: 48px;
 }
 
+.Services_info{
+    padding: 5%;
+}
+
 .Services_wrapper{
     width: 50%;
     border-radius: 1%;
     box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
 }
 
+.number_wrapper p{
+    margin-left: 10px;
+}
+
 .slider_services {
     position: relative;
     max-width: 600px;
     margin: auto;
+    margin-bottom: 5%;
     overflow: hidden;
 }
 
@@ -375,4 +408,9 @@ button {
 
 .dot.active {
     background-color: #717171;
+}
+
+.up_title_wrapper{
+    width: 100%;
+    text-align: center;
 }
