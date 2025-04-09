@@ -84,29 +84,22 @@
                     <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&amp;source=constructor-api&amp;um=constructor%3AV3aK97zjxxN1nqcru_bnX0L1R2zGUcGq" frameborder="0" allowfullscreen="true" width="600px" height="450px" style="display: block;">
                     </iframe>
                 </div>
-                <div class="form_wrapper">
-                    <div class="contact_form">
-                        <p>Контактная форма:</p>
-                    </div>
-                    <form action="" method="get" class="form-example">
-                        <div class="form-example">
-                            <label for="name">Ваше имя: </label>
-                            <input type="text" name="name" id="name" required />
+                <div class="form-container">
+                    <h2>Форма обратной связи</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        <div class="form-example">
-                            <label for="email">Введите ваш адресс электронной почты: </label>
-                            <input type="email" name="email" id="email" required />
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                        <div class="form-example_textarea_wrapper">
-                            <label for="textarea">Ваше предложение: </label>
-                            <div class="form-example_textarea">
-                                <textarea type="textarea" name="textarea" id="textarea">
-                                </textarea>
-                            </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <div class="form-example_submit">
-                            <input type="submit" value="Отправить" />
-                        </div>
+                        <button type="submit" class="form_button">Отправить</button>
                     </form>
                 </div>
             </div>

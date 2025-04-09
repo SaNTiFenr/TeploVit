@@ -361,6 +361,7 @@ footer{
 .slide_services{
     min-width: 100%;
     box-sizing: border-box;
+    text-align:justify;
 }
 
 .slide_services h2 {
@@ -369,6 +370,17 @@ footer{
 
 .slide_services p {
     font-size: 16px;
+}
+
+.slide_services_4{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slide_services_4 img{
+    height: max-content;
+    float: left;
+    width: 50%;
 }
 
 button {
@@ -413,4 +425,57 @@ button {
 .up_title_wrapper{
     width: 100%;
     text-align: center;
+}
+
+.form-container {
+    margin-top: 5%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Цвет рамки при фокусе */
+}
+
+.form_button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 4px; /* Закругляем углы */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
 }
