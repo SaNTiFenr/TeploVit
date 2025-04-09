@@ -479,3 +479,105 @@ textarea:focus {
 button:hover {
     background-color: #0056b3; /* Цвет кнопки при наведении */
 }
+
+@media (max-width: 768px) {
+    .Up_header{
+        flex-direction: column;
+        margin-bottom: 1%;
+    }
+
+    .Nav_header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Up_header div{
+        flex-direction: row;
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .Nav_Bar a{
+        align-content: center;
+    }
+
+    .Services_wrapper{
+        width: 85%;
+        padding: 3%;
+    }
+
+    .about{
+        width: 85%;
+        padding: 3%;
+    }
+
+    .big_p {
+        font-size: 18px;
+    }
+
+    .contacts_wrapper{
+        width: unset;
+    }
+
+    .red_logo_container{
+        align-items: center;
+    }
+
+    .blue_logo_container{
+        align-items: center;
+    }
+
+    .red_logo{
+        font-size: 17px;
+        margin-bottom: revert;
+    }
+
+    .blue_logo{
+        
+        font-size: 17px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .Up_header div{
+        flex-direction: column;
+    }
+
+    .red_logo{
+        font-size: 20px;
+    }
+
+    .blue_logo{
+        margin: 0px;
+        font-size: 20px;
+    }
+
+    .Nav_Bar{
+        text-align: center;
+        font-size: 18px;
+        flex-direction: column;
+    }
+
+    .slide_services_4 ul{
+        padding-left: 9%;
+    }
+
+    .about_us_info{
+        justify-items: center;
+        text-align: justify;
+    }
+
+    .map_wrapper{
+        justify-items: center;
+    }
+
+    .map_wrapper iframe{
+        width: auto;
+        height: auto;
+    }
+
+    footer{
+        height: auto;
+    }
+}
