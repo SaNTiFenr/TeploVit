@@ -60,3 +60,22 @@ function nextSlide() {
     showSlide(currentIndex + direction);
 }
 
+function openTab(evt, tabName) {
+    // Скрыть все элементы с классом "tab-content"
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabContents.forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Удалить класс "active" у всех табов
+    const tabLinks = document.querySelectorAll('.tab-link');
+    
+    tabLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+   // Показать текущий таб и добавить класс "active"
+   document.getElementById(tabName).classList.add('active');
+   evt.currentTarget.classList.add('active');
+}
