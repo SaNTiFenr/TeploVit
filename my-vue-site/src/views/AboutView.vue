@@ -1,5 +1,4 @@
 <template>
-    <main>
         <div class="about_us">
             <div class="main_ab_us_wrapper">
                 <div class="about">
@@ -69,11 +68,11 @@
                 </div>
             </div>
         </div>
-    </main>
+
 </template>
 
 <script>
 export default {
-  name: 'About_us_View'
+  name: 'AboutPage'
 }
 </script>

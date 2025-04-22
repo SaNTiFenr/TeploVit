@@ -1,5 +1,4 @@
 <template>
-    <main>
         <div class="Services_wrapper">
             <div class="Services_info">
                 <h1>
@@ -222,11 +221,9 @@
                 
             </div>
         </div>
-        
-    </main>
 </template>
 <script>
 export default {
-  name: 'Services_View'
+    name: 'ServicesPage'
 }
 </script>

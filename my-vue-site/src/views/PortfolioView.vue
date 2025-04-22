@@ -1,5 +1,5 @@
 <template>
-    <main>
+    
         <div class="Finished_work">
             <div class="Finished_works_wrapper">
                 <div class="up_title_wrapper">
@@ -44,10 +44,10 @@
                 
             </div>
         </div>
-    </main>
+    
 </template>
 <script>
 export default {
-  name: 'Finished_works_View'
+  name: 'PortfolioPage'
 }
 </script>

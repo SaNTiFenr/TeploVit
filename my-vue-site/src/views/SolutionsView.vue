@@ -1,5 +1,5 @@
 <template>
-    <main>
+    
         <div class="main_wrapper our_works_wrap">
             <div class="tabs">
                 <div class="tab-links">
@@ -417,10 +417,10 @@
                 </div>
             </div>
         </div>
-    </main>
+    
 </template>
 <script>
 export default {
-  name: 'Our_works_View'
+  name: 'SolutionsPage'
 }
 </script>

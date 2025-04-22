@@ -34,13 +34,13 @@
         </div>
         <div class="Nav_header">
             <nav class="Nav_Bar navigation">
-                <a href="Main.html" title="Main" rel="" class="Nav_Bar_a">Галавная</a>
-                <a href="Services.html" title="Services" rel="" class="Nav_Bar_a">Услуги</a>
-                <a href="Products.html" title="Products" rel="" class="Nav_Bar_a">Продукция</a>
-                <a href="Our_works.html" title="Our_works" rel="" class="Nav_Bar_a">Готовые решения</a>
-                <a href="Finished_works.html" title="Finished_works" rel="" class="Nav_Bar_a">Наши работы</a>
-                <a href="About_us.html" title="About_us" rel="" class="Nav_Bar_a">О компании</a>
-                <a href="Contacts.html" title="Contacts" rel="" class="Nav_Bar_a">Контакты</a>
+                <router-link to="/" class="Nav_Bar_a">Галавная</router-link>
+                <router-link to="/services" class="Nav_Bar_a">Услуги</router-link>
+                <router-link to="/products" class="Nav_Bar_a">Продукция</router-link>
+                <router-link to="/solutions" class="Nav_Bar_a">Готовые решения</router-link>
+                <router-link to="/portfolio" class="Nav_Bar_a">Наши работы</router-link>
+                <router-link to="/about" class="Nav_Bar_a">О компании</router-link>
+                <router-link to="/contacts" class="Nav_Bar_a">Контакты</router-link>
             </nav>
         </div>  
     </header>

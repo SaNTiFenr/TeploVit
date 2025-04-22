@@ -1,25 +1,42 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/Home.vue'
-// import ServicesView from '../views/Services.vue'
-// import ProductsView from '../views/Products.vue'
-// import Finished_works_View from '../views/Finished_works.vue'
-// import Our_works from '../views/Our_works.vue'
-// import About_us from '../views/About_us.vue'
-// import Contacts from '../views/Contacts.vue'
+import HomePage from '@/views/HomePage.vue'  
 
 
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: HomeView // Компонент должен быть импортирован
+        component: HomePage
     },
-//   { path: '/services', component: ServicesView },
-//   { path: '/products', component: ProductsView },
-//   { path: '/finishedworks', component: Finished_works_View },
-//   { path: '/ourworks', component: Our_works},
-//   { path: '/about_us', component: About_us},
-//   { path: '/contacts', component: Contacts },
+    {
+        path: '/services',
+        name: 'services',
+        component: () => import('@/views/ServicesView.vue')
+    },
+    {
+        path: '/products',
+        name: 'products',
+        component: () => import('@/views/ProductsView.vue')
+    },
+    {
+        path: '/solutions',
+        name: 'solutions',
+        component: () => import('@/views/SolutionsView.vue')
+    },
+    {
+        path: '/portfolio',
+        name: 'portfolio',
+        component: () => import('@/views/PortfolioView.vue')
+    },
+    {
+        path: '/about',
+        name: 'about',
+        component: () => import('@/views/AboutView.vue')
+    },
+    {
+        path: '/contacts',
+        name: 'contacts',
+        component: () => import('@/views/ContactsView.vue')
+    },
 ]
 
 const router = createRouter({

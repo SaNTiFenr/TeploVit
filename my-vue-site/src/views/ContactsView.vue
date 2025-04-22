@@ -1,5 +1,5 @@
 <template>
-     <main>
+     
         <div class="Contacts_wrapper">
             <div class="main_wrapper">
                 <div class="about_us_info">
@@ -51,10 +51,10 @@
                 </div>
             </div>
         </div>
-    </main>
+    
 </template>
 <script>
 export default {
-  name: 'Contact_View'
+  name: 'ContactPage'
 }
 </script>
