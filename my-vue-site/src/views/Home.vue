@@ -1,74 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\css\styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="Up_header">
-            <div class="Logo">
-                <a href=".\Main.html" title="Главная" rel="main" class="logo_img"><img src="..\Image\logo_0_2.png"></a>
-            </div>
-            <div class="Logo_text">
-                <div class="red_logo_container">
-                    <p class="red_logo">Kомпания "ТеплоВит" в Витебске</p>
-                </div>
-                <div class="blue_logo_container">
-                    <p class="blue_logo">Отопление,Водоснабжение</p>
-                    <p class="blue_logo">Альтернативная энергетика</p>
-                </div>
-            </div>
-            <div class="Logo_social">
-                <div class="number_wrapper">
-                    <a href="" title="Vk" rel="" class=""><img src="..\Image\black_vk.svg"></a> 
-                    <a href="" title="Vk" rel="" class=""><p>Наши соц сети</p></a>
-                </div>
-                <div class="number_wrapper">
-                    <a href="" title="Insta" rel="" class=""><img src="..\Image\black_inst.svg"></a>
-                    <a href="" title="Insta" rel="" class=""> <p>Наши соц сети</p></a>
-                </div>
-                <div class="number_wrapper">
-                    <img src="..\Image\mts.jpg">
-                    <p>+ 375 33 613-01-08</p>
-                </div>
-                <div class="number_wrapper">
-                    <img src="..\Image\mts.jpg">
-                    <p>+ 375 29 717-78-80</p>
-                </div>
-            </div>
-        </div>
-        <div class="Nav_header">
-            <nav class="Nav_Bar navigation">
-                <a href="Main.html" title="Main" rel="" class="Nav_Bar_a">Галавная</a>
-                <a href="Services.html" title="Services" rel="" class="Nav_Bar_a">Услуги</a>
-                <a href="Products.html" title="Products" rel="" class="Nav_Bar_a">Продукция</a>
-                <a href="Our_works.html" title="Our_works" rel="" class="Nav_Bar_a">Готовые решения</a>
-                <a href="Finished_works.html" title="Finished_works" rel="" class="Nav_Bar_a">Наши работы</a>
-                <a href="About_us.html" title="About_us" rel="" class="Nav_Bar_a">О компании</a>
-                <a href="Contacts.html" title="Contacts" rel="" class="Nav_Bar_a">Контакты</a>
-            </nav>
-        </div>  
-    </header>
-    <div class="slider">
-        <div class="slides">
-            <div class="slide"><img src="..\Image\slaid1.jpg"></div>
-            <div class="slide"><img src="..\Image\slaid2.jpg"></div>
-            <div class="slide"><img src="..\Image\slaid3.jpg"></div>
-            <div class="slide"><img src="..\Image\345890gk-is-124.jpg"></div>
-            <div class="slide"><img src="..\Image\slaid1.jpg"></div>
-            <div class="slide"><img src="..\Image\slaid2.jpg"></div>
-            <div class="slide"><img src="..\Image\slaid3.jpg"></div>
-            <div class="slide"><img src="..\Image\345890gk-is-124.jpg"></div> 
-        </div>
-    </div>
-    <main>
+<template>
         <div class="Main_info_wrapper">
             <div class="Main_info">
-                <p> Компания «ТеплоВит» может обеспечить выполнение проекта любой сложности. 
+                <div> 
+                    Компания «ТеплоВит» может обеспечить выполнение проекта любой сложности. 
                     Мы предлагаем лучшие цены  в Белоруссии на комплекс услуг по поставке  и монтажу инженерного оборудования.  
                     Компания гарантирует качество и надежность системы,  а так же снижение затрат  и существенную экономию Вашего бюджета на строительство.
                     Выбор газовых котлов для отопления частного дома
@@ -114,15 +48,12 @@
                         <li><p>Возможность получения консультации по выбору оборудования.</p></li>
                         <li><p>Гарантия на продукцию.</p></li>
                     </ul>
-                </p>
+                </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="footer_info">
-            <p>© 2013, компания "ТеплоВит", teplo.vit@mail.ru, +375 33 613 01 08</p>
-        </div>
-    </footer>
-    <script src="..\Js\script.js"></script>
-</body>
-</html>
+</template>
+<script>
+export default {
+  name: 'HomeView'
+}
+</script>

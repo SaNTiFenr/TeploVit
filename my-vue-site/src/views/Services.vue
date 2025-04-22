@@ -1,57 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\css\styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="Up_header">
-            <div class="Logo">
-                <a href=".\Main.html" title="Главная" rel="main" class="logo_img"><img src="..\Image\logo_0_2.png"></a>
-            </div>
-            <div class="Logo_text">
-                <div class="red_logo_container">
-                    <p class="red_logo">Kомпания "ТеплоВит" в Витебске</p>
-                </div>
-                <div class="blue_logo_container">
-                    <p class="blue_logo">Отопление,Водоснабжение</p>
-                    <p class="blue_logo">Альтернативная энергетика</p>
-                </div>
-            </div>
-            <div class="Logo_social">
-                <div class="number_wrapper">
-                    <a href="" title="Vk" rel="" class=""><img src="..\Image\black_vk.svg"></a> 
-                    <a href="" title="Vk" rel="" class=""><p>Наши соц сети</p></a>
-                </div>
-                <div class="number_wrapper">
-                    <a href="" title="Insta" rel="" class=""><img src="..\Image\black_inst.svg"></a>
-                    <a href="" title="Insta" rel="" class=""> <p>Наши соц сети</p></a>
-                </div>
-                <div class="number_wrapper">
-                    <img src="..\Image\mts.jpg">
-                    <p>+ 375 33 613-01-08</p>
-                </div>
-                <div class="number_wrapper">
-                    <img src="..\Image\mts.jpg">
-                    <p>+ 375 29 717-78-80</p>
-                </div>
-            </div>
-        </div>
-        <div class="Nav_header">
-            <nav class="Nav_Bar navigation">
-                <a href="Main.html" title="Main" class="Nav_Bar_a"><li>Галавная</li></a>
-                <a href="Services.html" title="Services"  class="Nav_Bar_a"><li>Услуги</li></a>
-                <a href="Products.html" title="Products"  class="Nav_Bar_a"><li>Продукция</li></a>
-                <a href="Our_works.html" title="Our_works" class="Nav_Bar_a"><li>Готовые решения</li></a>
-                <a href="Finished_works.html" title="Finished_works"  class="Nav_Bar_a"><li>Наши работы</li></a>
-                <a href="About_us.html" title="About_us"  class="Nav_Bar_a"><li>О компании</li></a>
-                <a href="Contacts.html" title="Contacts" class="Nav_Bar_a"><li>Контакты</li></a>
-            </nav>
-        </div>  
-    </header>
+<template>
     <main>
         <div class="Services_wrapper">
             <div class="Services_info">
@@ -277,12 +224,9 @@
         </div>
         
     </main>
-    <footer>
-        <div class="footer_info">
-            <p>© 2013, компания "ТеплоВит", teplo.vit@mail.ru, +375 33 613 01 08</p>
-        </div>
-    </footer>
-    <script src="..\Js\script_slider_services.js"></script>
-    <script src="..\Js\script.js"></script>
-</body>
-</html>
+</template>
+<script>
+export default {
+  name: 'Services_View'
+}
+</script>
