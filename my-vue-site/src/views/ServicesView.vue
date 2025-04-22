@@ -10,21 +10,21 @@
             </div>
             <div class="slider_services">
                 <div class="dots">
-                    <button class="prev_services" onclick="changeSlide(-1)">&#10094;</button>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
-                    <span class="dot" onclick="currentSlide(6)"></span>
-                    <button class="next_services" onclick="changeSlide(1)">&#10095;</button>
+                    <button class="prev_services" @click="changeSlide(-1)">&#10094;</button>
+                    <span class="dot" @click="currentSlide(1)"></span>
+                    <span class="dot" @click="currentSlide(2)"></span>
+                    <span class="dot" @click="currentSlide(3)"></span>
+                    <span class="dot" @click="currentSlide(4)"></span>
+                    <span class="dot" @click="currentSlide(5)"></span>
+                    <span class="dot" @click="currentSlide(6)"></span>
+                    <button class="next_services" @click="changeSlide(1)">&#10095;</button>
                 </div>
                 <div class="slides_services">
                     <div class="slide_services active">
                         <h2> Проектирование</h2>
                         <div class="slide_services_4">
                             <p>
-                                <img src="..\Image\etapy-proektirovaniya-kotelnoj.jpg">
+                                <img :src="images.etapy" alt="Этапы проектирования">
                                 Грамотно выполненный проект отопления – залог успешной, надежной и безопасной эксплуатации здания. Многолетний опыт работы и высокий уровень квалификации наших проектировщиков закладывает основу для вашего будущего комфорта.
                                 На расчетном этапе подбирается оборудование, сравнивается несколько вариантов его установки. Выбор наших специалистов основывается на нормативно-технической литературе и собственном практическом опыте. При расчете учитывается материал несущих стен здания (проектирование и монтаж систем отопления в кирпичном или деревянном доме существенно отличаются друг от друга); вид топлива и теплоносителя, режим эксплуатации отдельных помещений и многие другие факторы.
                                 Современный подход к проектированию и монтажу систем отопления предполагает как единое регулирование температуры здания, так и температурное регулирование его отдельных зон. В зависимости от ваших пожеланий мы можем предложить вам централизованное регулирование температуры или схему установки оборудования с локальным регулированием по частотным радиоканалам. Проектирование системы отопления обязательно увязывается с архитектурой дома и стилем его интерьеров, чтобы не нарушать дизайн концепцию.
@@ -115,7 +115,7 @@
                         <h2>Монтаж</h2>
                         <div class="slide_services_4">
                             <p>
-                                <img src="..\Image\642-montazh-ustanovka-gazovogo-kotla.jpg">
+                                <img :src="images.montazh" alt="Монтаж газового котла">
                                 Для обеспечения максимальной эффективности и экономичности работы, а также исключения вероятности появления сбоев или неисправностей, важно, чтобы услуги по монтажу системы отопления оказывались только профессионалами.
                                 Монтаж системы автономного отопления выполняется с учетом особенностей подключения других инженерных коммуникаций так, чтобы обеспечить их качественное, бесперебойное и безопасное для человека взаимодействие. Важно отметить, что ключевым моментом в оказании услуги по монтажу отопления является выбор типа системы — от этого будет зависеть и стоимость, и эффективность ее эксплуатации.
                                 В любом случае важно, чтобы монтаж отопления под ключ выполнялся сертифицированными работниками со строгим соблюдением всех требований проектной документации. Только в этом случае можно гарантировать качество результата.
@@ -155,7 +155,7 @@
                         <h2>Сервис и обслуживание</h2>
                         <div class="slide_services_4">
                             <p>
-                                <img src="..\Image\servises.png">    
+                                <img :src="images.servises" alt="">    
                                 Компания «ТеплоВит» поставляет только то оборудование, в котором мы уверены. Сервисный центр при компании «ТеплоВит» осуществляет гарантийное и послегарантийное обслуживание отопительной техники тех марок, которые у нас представлены.
                                 Для продолжительной эксплуатации, любая техника нуждается в периодическом сервисном обслуживании, которое продлевает его ресурс и снижает эксплуатационные затраты.
                             </p>
@@ -223,7 +223,47 @@
         </div>
 </template>
 <script>
+import etapyImage from '@/assets/images/etapy-proektirovaniya-kotelnoj.jpg'
+import montazhImage from '@/assets/images/642-montazh-ustanovka-gazovogo-kotla.jpg'
+import servisesImage from '@/assets/images/servises.png'
+
 export default {
-    name: 'ServicesPage'
+    name: 'ServicesView',
+    data() {
+    return {
+      slideIndex: 1,
+      images: 
+            {
+                etapy: etapyImage,
+                montazh: montazhImage,
+                servises: servisesImage
+            }
+        }
+    },
+    mounted() {
+        this.showSlides(this.slideIndex);
+    },
+    methods: {
+        showSlides(n) {
+        const slides = document.querySelectorAll('.slide_services');
+        const dots = document.querySelectorAll('.dot');
+
+        if (n > slides.length) { this.slideIndex = 1; }
+        if (n < 1) { this.slideIndex = slides.length; }
+
+        slides.forEach((slide, index) => {
+            slide.style.display = (index + 1 === this.slideIndex) ? 'block' : 'none';
+            dots[index].className = dots[index].className.replace(' active', '');
+        });
+
+        dots[this.slideIndex - 1].className += ' active';
+        },
+        changeSlide(n) {
+        this.showSlides(this.slideIndex += n);
+        },
+        currentSlide(n) {
+        this.showSlides(this.slideIndex = n);
+        }
+    }
 }
 </script>

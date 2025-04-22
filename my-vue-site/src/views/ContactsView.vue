@@ -1,5 +1,4 @@
 <template>
-     
         <div class="Contacts_wrapper">
             <div class="main_wrapper">
                 <div class="about_us_info">
@@ -51,10 +50,18 @@
                 </div>
             </div>
         </div>
-    
 </template>
 <script>
 export default {
   name: 'ContactPage'
 }
 </script>
+<style>
+    .contacts_wrapper {
+    justify-items: center;
+    width: 50%;
+    padding: 2%;
+    border-radius: 1%;
+    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
+}
+</style>

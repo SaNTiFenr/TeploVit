@@ -2,7 +2,7 @@
     <header>
         <div class="Up_header">
             <div class="Logo">
-                <a href=".\Main.html" title="Главная" rel="main" class="logo_img"><img  src="..\Image\logo_0_2.png"></a>
+                <a href=".\Main.html" title="Главная" rel="main" class="logo_img"><img :src="images.Logo" alt="ТеплоВит"></a>
             </div>
             <div class="Logo_text">
                 <div class="red_logo_container">
@@ -15,19 +15,19 @@
             </div>
             <div class="Logo_social">
                 <div class="number_wrapper">
-                    <a href="" title="Vk" rel="" class=""><img  src="..\Image\black_vk.svg"></a> 
+                    <a href="" title="Vk" rel="" class=""><img :src="images.Vk" alt=""></a> 
                     <a href="" title="Vk" rel="" class=""><p>Наши соц сети</p></a>
                 </div>
                 <div class="number_wrapper">
-                    <a href="" title="Insta" rel="" class=""><img src="..\Image\black_inst.svg"></a>
+                    <a href="" title="Insta" rel="" class=""><img :src="images.Inst" alt=""></a>
                     <a href="" title="Insta" rel="" class=""> <p>Наши соц сети</p></a>
                 </div>
                 <div class="number_wrapper">
-                    <img  src="..\Image\mts.jpg">
+                    <img :src="images.Mts" alt="">
                     <p>+ 375 33 613-01-08</p>
                 </div>
                 <div class="number_wrapper">
-                    <img src="..\Image\mts.jpg">
+                    <img :src="images.Mts" alt="">
                     <p>+ 375 29 717-78-80</p>
                 </div>
             </div>
@@ -45,3 +45,24 @@
         </div>  
     </header>
 </template>
+<script>
+import LogoImage from '@/assets/images/logo_0_2.png'
+import VkImage  from '@/assets/images/black_vk.svg'
+import InstImage from '@/assets/images/black_inst.svg'
+import MtsImage from '@/assets/images/mts.jpg'
+
+
+export default {
+    data() {
+    return {
+    images: 
+            {
+                Logo: LogoImage,
+                Vk: VkImage,
+                Inst:  InstImage,
+                Mts: MtsImage
+            }
+        }
+    },
+}
+</script>
