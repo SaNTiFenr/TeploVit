@@ -2,36 +2,40 @@
         <div class="Contacts_wrapper">
             <div class="main_wrapper">
                 <div class="about_us_info">
-                    <p class="big_p">
-                        Контакты
-                    </p>
-                    <p>
-                        Компания "ТеплоВит" Республика Беларусь, 210040, г. Витебск, ул. Фрунзе д. 22 к.3
-                    </p>
-                    <p>
-                        Телефоны:
-                    </p>
-                    <div class="number_wrapper">
-                        <img src="..\Image\mts.jpg">
-                        <p>+ 375 33 613-01-08</p>
+                    <div>
+                        <p class="big_p">
+                            Контакты
+                        </p>
                     </div>
-                    <div class="number_wrapper">
-                        <img src="..\Image\mts.jpg">
-                        <p>+ 375 29 717-78-80</p>
+                    <div class="info_t">
+                        <p>
+                            Компания "ТеплоВит" Республика Беларусь, 210040, г. Витебск, ул. Фрунзе д. 22 к.3
+                        </p>
+                        <p>
+                            Телефоны:
+                        </p>
+                        <div class="number_wrapper">
+                            <img :src="images.Mts" alt="">
+                            <p>+ 375 33 613-01-08</p>
+                        </div>
+                        <div class="number_wrapper">
+                            <img :src="images.Mts" alt="">
+                            <p>+ 375 29 717-78-80</p>
+                        </div>
+                        <p>
+                            Электронная почта: <a href="mailto:teplo.vit@mail.ru">teplo.vit@mail.ru</a> 
+                        </p>
                     </div>
-                    <p>
-                        Электронная почта: <a href="mailto:teplo.vit@mail.ru">teplo.vit@mail.ru</a> 
-                    </p>
                 </div>
                 <div class="map_wrapper">
-                    <p class="bolid_p">
-                        Схема проезда:
+                    <p class="map_wr_p">
+                        Схема проезда
                     </p>
                     <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&amp;source=constructor-api&amp;um=constructor%3AV3aK97zjxxN1nqcru_bnX0L1R2zGUcGq" frameborder="0" allowfullscreen="true" width="600px" height="450px" style="display: block;">
                     </iframe>
                 </div>
                 <div class="form-container">
-                    <h2>Форма обратной связи</h2>
+                    <p class="big_p">Форма обратной связи</p>
                     <form action="#" method="post">
                         <div class="form-group">
                             <label for="name">Имя:</label>
@@ -52,16 +56,16 @@
         </div>
 </template>
 <script>
+import MtsImage from '@/assets/images/mts.jpg'
+
 export default {
-  name: 'ContactPage'
+    data() {
+    return {
+    images: 
+            {
+                Mts: MtsImage
+            }
+        }
+    },
 }
 </script>
-<style>
-    .contacts_wrapper {
-    justify-items: center;
-    width: 50%;
-    padding: 2%;
-    border-radius: 1%;
-    box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0);
-}
-</style>

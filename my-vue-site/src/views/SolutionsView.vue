@@ -1,30 +1,38 @@
-<template>
-    <div class="main_wrapper our_works_wrap">
-        <div class="tabs">
-            <div class="tab-links">
-                <button 
-                    v-for="tab in tabList" 
-                    :key="tab.id"
-                    class="tab-link"
-                    :class="{ active: activeTab === tab.id }"
-                    @click="setActiveTab(tab.id)"
-                >
-                    {{ tab.title }}
-                </button>
+    <template>
+        <div class="solutions-page">
+        <div class="solutions-header">
+            <h1>Готовые решения</h1>
+            <div class="header-divider"></div>
+        </div>
+    
+        <div class="tabs-container">
+            <div class="tabs-navigation">
+            <button 
+                v-for="tab in tabList" 
+                :key="tab.id"
+                class="tab-button"
+                :class="{ 'active': activeTab === tab.id }"
+                @click="setActiveTab(tab.id)"
+            >
+                {{ tab.title }}
+            </button>
             </div>
-            
-            <!-- Динамически отображаем контент для активного таба -->
-            <div class="tab-content" :class="{ active: activeTab === tab.id }" v-for="tab in tabList" :key="'content-' + tab.id">
-                <div v-if="activeTab === tab.id" v-html="getTabContent(tab.id)"></div>
+    
+            <div class="tab-content-wrapper">
+            <div 
+                v-for="tab in tabList" 
+                :key="'content-' + tab.id"
+                class="tab-content"
+                :class="{ 'active': activeTab === tab.id }"
+                v-html="getTabContent(tab.id)"
+            ></div>
             </div>
         </div>
-    </div>
-</template>
+        </div>
+    </template>
 
 <script setup>
 import { ref } from 'vue';
-
-// Импортируем изображения
 import St2_1 from '@/assets/images/St2_1.png';
 import St2_2 from '@/assets/images/st2_2.png';
 import St2_3 from '@/assets/images/st2_3.png';
@@ -35,21 +43,24 @@ import St5 from '@/assets/images/st5.jpg';
 
 const activeTab = ref('article1');
 
-// Функция для замены плейсхолдеров на реальные пути к изображениям
 function processContent(content) {
     return content
-        .replace(/:src="St2_1"/g, `src="${St2_1}"`)
-        .replace(/:src="St2_2"/g, `src="${St2_2}"`)
-        .replace(/:src="St2_3"/g, `src="${St2_3}"`)
-        .replace(/:src="St3_1"/g, `src="${St3_1}"`)
-        .replace(/:src="St3_2"/g, `src="${St3_2}"`)
-        .replace(/:src="St3_3"/g, `src="${St3_3}"`)
-        .replace(/:src="St5"/g, `src="${St5}"`);
+    .replace(/:src="St2_1"/g, `src="${St2_1}"`)
+    .replace(/:src="St2_2"/g, `src="${St2_2}"`)
+    .replace(/:src="St2_3"/g, `src="${St2_3}"`)
+    .replace(/:src="St3_1"/g, `src="${St3_1}"`)
+    .replace(/:src="St3_2"/g, `src="${St3_2}"`)
+    .replace(/:src="St3_3"/g, `src="${St3_3}"`)
+    .replace(/:src="St5"/g, `src="${St5}"`);
 }
 
 function getTabContent(tabId) {
     const tab = tabList.find(t => t.id === tabId);
     return tab ? processContent(tab.content) : '';
+}
+
+function setActiveTab(tabId) {
+    activeTab.value = tabId;
 }
 
 const tabList = [
@@ -430,26 +441,224 @@ const tabList = [
     // остальные табы в том же формате
 ];
 
-function setActiveTab(tabId) {
-    activeTab.value = tabId;
-}
-
 // export default {
 //   name: 'SolutionsPage'
 // }
 </script>
 
 <style scoped>
-.tab-content {
+    .solutions-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f5f5f0;
+    }
+
+    .solutions-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    }
+
+    .solutions-header h1 {
+    color: #131d82;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    }
+
+    .header-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #131d82, #f35d22);
+    margin: 0 auto;
+    }
+
+    .tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    }
+
+    .tabs-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    }
+
+    .tab-button {
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #555;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    }
+
+    .tab-button:hover {
+    border-color: #f35d22;
+    color: #131d82;
+    }
+
+    .tab-button.active {
+    background-color: #131d82;
+    color: white;
+    border-color: #131d82;
+    }
+
+    .tab-content-wrapper {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+    }
+
+    .tab-content {
     display: none;
-}
+    animation: fadeIn 0.5s;
+    }
 
-.tab-content.active {
+    .tab-content.active {
     display: block;
-}
+    }
 
-.tab-link.active {
-    font-weight: bold;
-    /* другие стили для активной кнопки */
-}
+    @keyframes fadeIn {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+    }
+
+    /* Стили для контента внутри табов */
+    .tab-content h2 {
+    color: #131d82;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    }
+
+    .tab-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    }
+
+    .tab-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab_img {
+    float: left;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    }
+
+    .tab-content_wrap::after,
+    .tab-content_wrap_st3::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    .tab-content ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+    }
+
+    .tab-content li {
+    margin-bottom: 0.8rem;
+    color: #555;
+    line-height: 1.5;
+    }
+
+    .table_container {
+    margin: 2rem 0;
+    overflow-x: auto;
+    }
+
+    .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    }
+
+    .responsive-table th {
+    background-color: #131d82;
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+    }
+
+    .responsive-table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    }
+
+    .responsive-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+    }
+
+    .logo_table {
+    text-align: center !important;
+    font-size: 1.1rem;
+    }
+
+/* Адаптивные стили */
+    @media (max-width: 768px) {
+    .tabs-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-button {
+        width: 100%;
+        white-space: normal;
+        text-align: left;
+    }
+    
+    .tab-content-wrapper {
+        padding: 1rem;
+    }
+    
+    .tab_img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+    }
+    
+    .solutions-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tab-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .adaptive {
+        display: block;
+        width: 100%;
+    }
+    
+    .pc_v {
+        display: none;
+    }
+    }
+
+    @media (min-width: 769px) {
+    .adaptive {
+        display: none;
+    }
+    
+    .pc_v {
+        display: table;
+    }
+    }
 </style>
