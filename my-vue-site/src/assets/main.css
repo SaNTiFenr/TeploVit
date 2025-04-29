@@ -258,16 +258,6 @@ h3 {
   transform: translateY(-2px);
 }
 
-.Main_info{
-  /* padding: 5%; */
-  /* border-radius: 1%;
-  box-shadow: 
-  -5px 0 5px -3px rgba(0,0,0,0.5), 
-  5px 0 5px -3px rgba(0,0,0,0.5),
-  0 -5px 5px -3px rgba(0,0,0,0), 
-  0 5px 5px -3px rgba(0,0,0,0); */
-}
-
 .Beige_div{
   background-color: #f7f2ed;
   text-align: center;
@@ -449,11 +439,6 @@ h3 {
   padding: 5%;
   height: min-content;
   margin: 2%;
-}
-
-.about_us{
-  /* border-radius: 1%;
-  box-shadow: -5px 0 5px -3px rgba(0, 0, 0, 0.5), 5px 0 5px -3px rgba(0, 0, 0, 0.5), 0 -5px 5px -3px rgba(0, 0, 0, 0), 0 5px 5px -3px rgba(0, 0, 0, 0); */
 }
 
 .Finished_works_wrapper{
@@ -1103,6 +1088,7 @@ button:hover {
   background-color: #131d82;
   color: white;
 }
+
 .services-page {
   width: 100%;
   padding: 2rem;

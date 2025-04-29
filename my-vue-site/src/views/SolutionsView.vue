@@ -448,7 +448,7 @@ const tabList = [
 
 <style scoped>
     .solutions-page {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
     background-color: #f5f5f0;
