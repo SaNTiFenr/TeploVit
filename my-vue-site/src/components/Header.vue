@@ -244,7 +244,7 @@
   }
   
   /* Адаптивность */
-  @media (max-width: 992px) {
+  @media (max-width: 1024px) {
     .header-container {
       flex-direction: column;
       gap: 15px;
@@ -258,7 +258,8 @@
     .main-navigation {
       overflow-x: auto;
       padding: 0 10px;
-      justify-content: flex-start;
+      flex-direction: column;
+      text-align: center;
     }
     
     .nav-link {
@@ -268,7 +269,7 @@
     }
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     .brand-section {
       flex-direction: column;
       text-align: center;

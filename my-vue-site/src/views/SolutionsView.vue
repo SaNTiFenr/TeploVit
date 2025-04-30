@@ -611,7 +611,7 @@ const tabList = [
     }
 
 /* Адаптивные стили */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
     .tabs-navigation {
         flex-direction: column;
         align-items: stretch;
@@ -652,11 +652,15 @@ const tabList = [
     }
     }
 
-    @media (min-width: 769px) {
+    @media (max-width: 480px) {
     .adaptive {
         display: none;
     }
     
+    .solutions-page{
+        padding: 0rem!important;
+    }
+
     .pc_v {
         display: table;
     }

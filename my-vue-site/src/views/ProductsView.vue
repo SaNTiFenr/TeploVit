@@ -724,7 +724,7 @@ export default {
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .products-controls {
     flex-direction: column;
     align-items: stretch;
@@ -752,11 +752,15 @@ export default {
   }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 480px) {
   .modal-content {
     flex-direction: row;
   }
-  
+
+  .products-page{
+    padding: 0%;
+  }
+
   .modal-images {
     width: 50%;
     padding-right: 1.5rem;

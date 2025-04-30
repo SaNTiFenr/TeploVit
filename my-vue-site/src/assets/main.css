@@ -1297,7 +1297,11 @@ button:hover {
   }
 
   .big_p {
-      font-size: 18px;
+      font-size: 32px;
+  }
+
+  .map_wrapper{
+    flex-direction: column;
   }
 
   .contacts_wrapper{
@@ -1334,6 +1338,11 @@ button:hover {
       font-size: 17px;
   }
 
+  .about_us_info {
+    display: flex;
+    flex-direction: column;
+  }
+
   .Finished_work{
       width: 85%;
       padding-left: unset;
@@ -1347,6 +1356,31 @@ button:hover {
   }
   .pc_v{
       display: none;
+  }
+
+  .Main_Bg_p{
+    padding: 2%;
+    font-size: 24px;
+  }
+  .Main_Bg_desc{
+    padding: 2%;
+    font-size: 18px;
+  }
+
+  .Beige_div p {
+    
+  }
+
+  .Main_Bg_Img{
+    height: 500px;
+  }
+
+  .svg_wrapper{
+    flex-direction: column;
+  }
+
+  .form-group{
+    width: 75%;
   }
 }
 
@@ -1402,7 +1436,36 @@ button:hover {
       flex-direction: row;
       flex-wrap: wrap;
       
-  } 
+  }
+
+  .svg_wrapper{
+    flex-direction: column;
+  }
+  
+  .Main_Bg_p{
+    font-size: 24px;
+  }
+
+  .services-page{
+    padding: 0%;
+  }
+
+  .big_p{
+    font-size: 24px;
+  }
+
+  .info_t p{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .form-group{
+    width: 75%;
+  }
+
+  .map_wr_p{
+    font-size: 24px;
+  }
 
   .table_container td{
       padding: 5%;
