@@ -771,5 +771,9 @@ export default {
     width: 50%;
     padding-left: 1.5rem;
   }
+  .filter-select,
+  .sort-select{
+    padding: 0px;
+  }
 }
 </style>
