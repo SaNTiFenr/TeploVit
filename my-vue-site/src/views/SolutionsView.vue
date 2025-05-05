@@ -170,10 +170,10 @@ const tabList = [
                                             </th>
                                         </tr>
                                         <tr>
-                                            <th>
+                                            <th class="table_+">
                                                 Плюсы:
                                             </th>
-                                            <th>
+                                            <th class="table_-">
                                                 Минусы:
                                             </th>
                                         </tr>

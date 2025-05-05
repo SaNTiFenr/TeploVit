@@ -10,19 +10,17 @@
     
         <div class="services-slider">
             <div class="slider-controls">
-            <button class="slider-arrow prev" @click="changeSlide(-1)">&#10094;</button>
-            
-            <div class="slider-dots">
-                <span 
-                v-for="n in 6" 
-                :key="n"
-                class="dot" 
-                :class="{ 'active': slideIndex === n }"
-                @click="currentSlide(n)"
-                ></span>
-            </div>
-            
-            <button class="slider-arrow next" @click="changeSlide(1)">&#10095;</button>
+                <button class="slider-arrow prev" @click="changeSlide(-1)">&#10094;</button>
+                    <div class="slider-dots">
+                        <span 
+                        v-for="n in 6" 
+                        :key="n"
+                        class="dot" 
+                        :class="{ 'active': slideIndex === n }"
+                        @click="currentSlide(n)"
+                        ></span>
+                    </div>
+                <button class="slider-arrow next" @click="changeSlide(1)">&#10095;</button>
             </div>
     
             <div class="slides-container">
@@ -150,3 +148,104 @@
         }
     }
     </script>
+
+<style scoped>
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.slider-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 0%;
+  background-color: #f5f5f0;
+  border: 2px solid #131d82;
+  color: #131d82;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background-color: #131d82;
+  color: white;
+}
+
+.slider-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #f35d22;
+  transform: scale(1.2);
+}
+
+.dot:hover:not(.active) {
+  background-color: #131d82;
+}
+
+/* Анимация для активной точки */
+.dot.active {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(243, 93, 34, 0.4);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 8px rgba(243, 93, 34, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(243, 93, 34, 0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .slider-controls {
+    gap: 10px;
+  }
+  
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  
+  .slider-dots {
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+</style>

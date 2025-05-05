@@ -270,7 +270,7 @@ h3 {
 }
 
 .Orange_div{
-  background-color: #f35d22;
+  background-color: #ffa07a;
 }
 
 .Orange_div svg{
@@ -556,6 +556,12 @@ footer{
   padding: 5%;
 }
 
+.table_+{
+  background-color: #131d82!important;
+}
+.table_-{
+  background-color: #f35d22!important;
+}
 /* .first_img_st2{
 
 } */
@@ -773,6 +779,7 @@ textarea:focus {
 }
 
 .table_container td{
+  width: 100%;
   padding: 15px;
   text-align: justify;
 }
