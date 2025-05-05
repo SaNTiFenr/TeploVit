@@ -199,7 +199,7 @@ const tabList = [
                                             </th>
                                         </tr>
                                         <tr>
-                                            <th>
+                                            <th class="table_+">
                                                 Плюсы:
                                             </th>
                                         </tr>
@@ -213,7 +213,7 @@ const tabList = [
                                     </table>
                                     <table class="responsive-table adaptive">
                                         <tr>
-                                            <th>
+                                            <th class="table_-">
                                                 Минусы:
                                             </th>
                                         </tr>
@@ -320,10 +320,10 @@ const tabList = [
                     <div class="table_container">
                         <table  class="responsive-table pc_v">
                             <tr>
-                                <th>
+                                <th class="table_+">
                                     Положительные характеристики:
                                 </th>
-                                <th>
+                                <th class="table_-">
                                     Отрицательные характеристики:
                                 </th>
                             </tr>
@@ -362,7 +362,7 @@ const tabList = [
                     <div class="table_container">
                         <table  class="responsive-table adaptive">
                             <tr>
-                                <th>
+                                <th class="table_+">
                                     Положительные характеристики:
                                 </th>
                             </tr>
@@ -388,7 +388,7 @@ const tabList = [
                         </table>
                         <table class="responsive-table adaptive">
                             <tr>
-                                <th>
+                                <th class="table_-">
                                     Отрицательные характеристики:
                                 </th>
                             </tr>
